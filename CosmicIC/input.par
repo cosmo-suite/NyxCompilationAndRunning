@@ -1,0 +1,22 @@
+// Run:
+np=8192
+box_size=5218.29   // In Mpc/h
+seed=73452342811
+z_in=100.0
+
+// Cosmology:
+hubble=0.6777
+Omega_m=0.307   // Total matter content; 1-this will be DE
+Omega_bar=0.048
+Omega_nu=0.0
+Omega_r=0.0
+Sigma_8=0.82
+n_s=0.965
+w_de=-1.0
+N_nu=3
+nu_pairs=4
+f_NL=0.0
+TFFlag=0
+
+// Code stuff:
+PrintFormat=6
