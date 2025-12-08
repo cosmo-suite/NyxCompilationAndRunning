@@ -12,9 +12,8 @@ Dependenices: fftw library
 3. make -j8
 4. `mpirun -n <nranks> ./init input.par cmb.tf IC_File`
 
-`input.par` - the inputs file. `np` is the number of cells in each direction.  
-Note that the dimension in each direction specified by `box_size` is in the units of 
-Mpc/h.  
+`input.par` - the inputs file. `np` is the number of cells in each direction. Note that 
+the dimension in each direction specified by `box_size` is in the units of Mpc/h.  
 `IC_File` is the prefix to the filenames generated. Each rank writes the data into a 
 separate file. These files can be read in by Nyx.   
 
