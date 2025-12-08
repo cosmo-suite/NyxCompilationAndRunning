@@ -1,5 +1,9 @@
 # Post processing for Nyx
-Gimlet is a repository that contains functionality for post processing Nyx outputs.
+Gimlet is a repository that contains functionality for post processing Nyx outputs.  
+Clone the repository
+```
+git clone https://maheshnatarajan@bitbucket.org/zarija/gimlet2.git
+```
 
 # How to run on Perlmutter (NERSC)
 
