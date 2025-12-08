@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -A GEO163                # Project account
+#SBATCH -J Nyx_LightconeAndHalos # Job name
+#SBATCH -o my_gpu_job.%j.out     # Standard output (%j = job ID)
+#SBATCH -e my_gpu_job.%j.err     # Standard error
+#SBATCH -p batch                 # Partition (batch = default GPU partition)
+#SBATCH -N 2048                   # Number of nodes
+#SBATCH -t 12:00:00              # Walltime (hh:mm:ss)
+#SBATCH --gpus-per-node=8        # GPUs per node (Frontier has 8 GCDs per node)
+#SBATCH --gpu-bind=closest       # Bind GPUs close to CPUs
+
+# Load necessary modules
+source ~/.bash_profile
+
+
+# Optional: diagnostics
+echo "Job started on $(date)"
+echo "Running on node: $(hostname)"
+echo "Allocated GPUs: $HIP_VISIBLE_DEVICES"
+
+# Run your GPU application
+srun -n 16384 --ntasks-per-node=8 ./Nyx3d.hip.x86-trento.MTMPI.HIP.ex inputs_8192x8192x8192_read_restart nyx.lightcone_start_z=4.5
+
+echo "Job finished on $(date)"
