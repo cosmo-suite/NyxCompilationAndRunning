@@ -1,4 +1,5 @@
 # How to run the LyA Nyx code
+The LyA test case in the [Nyx repo is here](https://github.com/AMReX-Astro/Nyx/tree/development/Exec/LyA)
 
 1. See the CosmicIC folder fo details of creating the initial condition
 2. List the names of the initial condition files output byt the CosmicIC code in a `FileList.txt`
