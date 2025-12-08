@@ -3,7 +3,7 @@ The CosmicIC repository generates the initial dark matter particle positions con
 with the overdensity spectrum at a specified redshift. The transfer function used to 
 generate the spectrum is in a file `cmb.tf` in the repo. The input file `input.par` 
 specifies all the required parameters for generating the initial particle locations. 
-It runs in parallel using MPI. The steps are as below.
+It runs in parallel using MPI. Access is needed. Not open-source. The steps are as below.
 
 Dependenices: fftw library
  

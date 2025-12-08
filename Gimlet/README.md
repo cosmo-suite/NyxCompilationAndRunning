@@ -1,6 +1,6 @@
 # Post processing for Nyx
 Gimlet is a repository that contains functionality for post processing Nyx outputs.  
-Clone the repository
+Clone the repository (access needed)
 ```
 git clone https://maheshnatarajan@bitbucket.org/zarija/gimlet2.git
 ```
