@@ -6,8 +6,8 @@ The different test cases are in the [Exec](https://github.com/AMReX-Astro/Nyx/tr
 contains some isntructions of how to run these test cases. Here is what the individual directories in this repository contain
 
 1. `CosmicIC` - generating initial conditions for the dark matter particles. Required by all simulations.
-2. `Gimlet` - post processing Nyx data
-3. `HaloFinder` - writing lightcones and halos for dark matter simulations
-4. `LyA` - Lyman alpha forest simulations.
+2. `LyA` - Dark matter particles with baryonic matter simulations for Lyman alpha.
+3. `HaloFinder` - Dark matter particles simulations for writing lightcones and halos for dark matter simulations
+4. `Gimlet` - post processing Nyx data
 
 These are not end-to-end details. But inputs, makefiles and scripts on Perlmutter and Frontier.
