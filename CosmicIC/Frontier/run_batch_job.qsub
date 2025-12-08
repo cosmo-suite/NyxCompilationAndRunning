@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -A GEO163                 # Project account
+#SBATCH -J Nyx_LightconeAndHalos  # Job name
+#SBATCH -o my_cpu_job.%j.out      # Standard output (%j = job ID)
+#SBATCH -e my_cpu_job.%j.err      # Standard error
+#SBATCH -p batch                   # Partition (batch = default)
+#SBATCH -N 256                     # Number of nodes
+#SBATCH -t 02:00:00                # Walltime (hh:mm:ss)
+#SBATCH --ntasks-per-node=32      # CPU tasks per node (adjust to cores per node)
+#SBATCH --cpus-per-task=1          # Threads per MPI task (1 for pure MPI)
+#SBATCH --hint=nomultithread       # Avoid hyperthreading if desired
+
+# Load necessary modules
+source ~/.bash_profile
+
+# Optional: diagnostics
+echo "Job started on $(date)"
+echo "Running on node: $(hostname)"
+
+# Run your CPU-only MPI application
+# Calculate total tasks: NTASKS = NODES * NTASKS_PER_NODE
+# srun will handle MPI launch across nodes
+srun --cpu-bind=cores -n $((SLURM_NNODES*SLURM_NTASKS_PER_NODE)) init input.par cmb.tf IC_File
+
+echo "Job finished on $(date)"

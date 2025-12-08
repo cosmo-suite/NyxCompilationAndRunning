@@ -1,0 +1,21 @@
+module purge
+module load PrgEnv-amd           # AMD programming environment
+module load craype-accel-amd-gfx90a  # expose AMD GPUs
+module load rocm                 # ROCm/HIP libraries
+module load cray-mpich           # ROCm-compatible MPI
+module load libfabric             # optional, if needed
+module load cray-python/3.11.7
+export CRAY_CPU_TARGET=x86-trento
+
+
+#module reset
+#module load PrgEnv-gnu
+#module load gcc/12.2.0
+#module load cray-mpich
+#module load craype
+#module load rocm
+#module load PrgEnv-amd
+#module load libfabric
+
+export HIP_ARCH=gfx90a
+export LD_LIBRARY_PATH=$HOME/.local/fftw-mpi/lib:$LD_LIBRARY_PATH
