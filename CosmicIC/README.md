@@ -15,8 +15,11 @@ Dependenices: fftw library
 `input.par` - the inputs file. `np` is the number of cells in each direction. Note that 
 the dimension in each direction specified by `box_size` is in the units of Mpc/h.  
 `IC_File` is the prefix to the filenames generated. Each rank writes the data into a 
-separate file. These files can be read in by Nyx.   
+separate file. These files can be read in by Nyx.  
+
+Note: The initial binary files for particles can be created using other codebases such as 
+MUSIC and CLASS as well.
 
 # How to run on Frontier
 The folder `Frontier` has the modules to be loaded and the batch script for running the 
-CosmicIC code.  
+CosmicIC code.
