@@ -7,9 +7,9 @@ It runs in parallel using MPI. Access is needed. Not open-source. The steps are 
 
 Dependenices: fftw library
  
-1. git clone https://maheshnatarajan@bitbucket.org/zarija/cosmicic.git
-2. cd cosmicic
-3. make -j8
+1. `git clone https://maheshnatarajan@bitbucket.org/zarija/cosmicic.git` (access needed
+2. `cd cosmicic`
+3. `make -j8`
 4. `mpirun -n <nranks> ./init input.par cmb.tf IC_File`
 
 `input.par` - the inputs file. `np` is the number of cells in each direction. Note that 
